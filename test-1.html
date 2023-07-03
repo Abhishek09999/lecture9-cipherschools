@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./test.css"/>
+    <title>Page title</title>
+</head>
+<body>
+    <main>
+        <h1 onclick="changetext(this)">My page title</h1>
+        <input type="text" id="Firstname" onchange="upperCase"/>
+        <div onmouseover="mOver(this)" onmouseout="mOut(this)">
+            Mouse over me
+        </div>
+        <article class="first__article">
+            <h2>list of amazing fruits</h2>
+            <p>must eat fruits</p>
+            <div class="wrapper-1">
+                <ul class="apple-list">
+                    <li class="apple">Apples</li>
+                    <li class="orange">Orange</li>
+                    <li class="avocado">Avocados</li>
+                    <li class="grape">Grapes
+                        <ul>
+                            <li class="type-1">Moon drops</li>
+                            <li>Sultana</li>
+                            <li>Concord</li>
+                            <li>Crimson Seedless</li>
+                        </ul>
+                    </li>
+                    <li class="banana">Bananas</li>
+                </ul>
+                <button class="bin-1">Read full list</button>
+            </div>
+        </article>
+        <article class="second_article">
+            <h2>Amazing places in kenya</h2>
+                <p>Must visit places in kenya</p>
+               <div class="wrapper-2">
+               <ul class="place-lists">
+                <li>Maasai</li>
+                <li>Diani</li>
+                <li>Watamu</li>
+                <li>Amboseli national park</li>
+                <li>Lake Nkuru</li>
+               </ul>
+               <button class="btn-2">Read full list</button>
+            </div>
+            <div>
+                <button onclick="displaydate()">
+                    The time is:
+                    <p id="demo"></p>
+                </button>
+            </div>
+        </article>
+    </main>
+    <script>
+        function changetext(id){
+            id.innerHTML="This is after click";
+        }
+        function displaydate(){
+            document.getElementById("demo").innerHTML=new Date();
+        }
+        function upperCase(){
+            const x=document.getElementById("Firstname");
+        x.value=x.value.toUpperCase();
+            }
+            function mOver(obj){
+                obj.innerHTML="Thank you";
+            }
+            function mOut(obj){
+                obj.innerHTML="Mouse over me";
+            }
+    </script>
+</body>
+</html>
+   
